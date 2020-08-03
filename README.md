@@ -14,7 +14,7 @@ node index.js
 You should now be prompted with some questions from your terminal. You're all set up!
 
 ## How to View Tests
-`cd` into the cloned version of this repo if you haven't yet and run the following command:
+`cd` into the cloned version of this repo if you haven't already, and run the following command:
 
 ```
 node test.js

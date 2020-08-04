@@ -32,14 +32,15 @@ async function main(prompter) {
 	try {
 		searchCriteria = await determineSearchCriteria(prompter);
 		prompter.close();
-		console.log("Searching files...\n\n\n");
+		console.log(`Searching files for ${searchTerm}...\n\n\n`);
+		// console.log("Searching files ...\n\n\n");
 	} catch (error) {
 		(async function promptForSearchCriteriaUntilValidResponse(errorMsg) {
 			console.error(errorMsg);
 			try {
 				searchCriteria = await determineSearchCriteria(prompter);
 				prompter.close();
-				console.log("Searching files...\n\n\n");
+				console.log(`Searching files for ${searchTerm}...\n\n\n`);
 			} catch (error) {
 				promptForSearchCriteriaUntilValidResponse(error);
 			}
